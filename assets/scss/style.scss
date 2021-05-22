@@ -1,0 +1,38 @@
+@import 'card';
+
+html {
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #D7CDCC;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 75%;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #1D1E2C;
+    font-family: 'Hind', sans-serif;
+    margin: 1.5em 0 3em 0;
+}
+
+.game-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}

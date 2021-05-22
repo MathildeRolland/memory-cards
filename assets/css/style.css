@@ -1,0 +1,90 @@
+.card {
+  width: 10em;
+  height: 12em;
+  border-radius: 1em;
+  cursor: pointer;
+  background: #941B0C;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(0);
+  box-shadow: 0 0 5px #444;
+}
+.card .card.clicked {
+  transform: rotateY(180deg);
+  transition: transform 1s;
+}
+.card .card__face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1em;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card .card__face--recto {
+  z-index: 90;
+}
+.card .card__face--verso {
+  transform: rotateY(180deg);
+  background-color: #C48484;
+}
+.card .card__logo {
+  width: 75%;
+  height: 75%;
+  background: url("../../images/logo.svg") center center/contain no-repeat;
+}
+.card .card__image-container {
+  width: 60%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.card .card__image {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #D7CDCC;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 75%;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #1D1E2C;
+  font-family: "Hind", sans-serif;
+  margin: 1.5em 0 3em 0;
+}
+
+.game-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */
