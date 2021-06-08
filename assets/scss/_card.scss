@@ -1,17 +1,18 @@
 .card {
-    width: 10em;
-    height: 12em;
+    width: 5em;
+    height: 7em;
     border-radius: 1em;
     cursor: pointer;
     background: #941B0C;
     position: relative;
     transform-style: preserve-3d;
     transform: rotateY(0);
+    transition: transform 1s;
     box-shadow: 0 0 5px #444;
 
-    .card.clicked {
-        transform: rotateY(180deg);
-        transition: transform 1s;
+    @include tablet {
+        width: 10em;
+        height: 12em;
     }
 
     .card__face {
@@ -58,8 +59,38 @@
         margin: 0;
         padding: 0;
     }
+}
 
+.card__container .clicked {
+    transform: rotateY(180deg);
+    transition: transform 1s;
+}
 
+.card__container .match .card__logo {
+    background: none;
+}
 
+.card__container .match {
+    transform: rotateY(180deg);
+    animation: fadeOut 1.5s ease-out forwards;
+    animation-delay: 1s;
+}
+
+.card__container .timesup .card__logo {
+    background: none;
+}
+
+.card__container .timesup {
+    animation: fadeOut 1.5s ease-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
